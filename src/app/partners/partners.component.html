@@ -1,0 +1,38 @@
+<section class="text-black bg-white body-font">
+  <div class="container px-5 py-10 mx-auto">
+    <h2 class="text-xs text-blue-800 tracking-widest font-medium title-font mb-1"> Global Summit Connect</h2>
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">Our Valued Partners</h1>
+    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Welcome to Global Summit Connect, where collaboration meets innovation! Our partners are integral to our mission of fostering global connections and driving meaningful change. Through strategic alliances with industry leaders, innovators, and visionaries, we empower organizations to unlock new opportunities, share knowledge, and create impactful solutions that shape the future.</p>
+   <br>
+   <br>
+    <div class="flex flex-col text-center w-full mb-5">
+      <h2 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-blue-800">Partnership</h2>
+    </div>
+    <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+      <table class="table-auto w-full text-left">
+        <thead>
+          <tr class="bg-blue-800 text-white">
+            <th class="px-4 py-3">Company</th>
+            <th class="px-4 py-3">Trademark</th>
+            <th class="px-4 py-3">Sponsorship</th>
+            <th class="px-4 py-3">Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let partner of partners">
+            <td class="px-4 py-3">{{ partner.prt_company }}</td>
+            <td class="px-4 py-3">
+              <img [src]="partner.prt_trademark" [alt]="partner.prt_company + ' Logo'" width="100">
+            </td>
+            <td class="px-4 py-3">{{ partner.prt_sponsor | uppercase }}</td> 
+            <td class="px-4 py-3 text-blue-800">
+              <a [href]="partner.prt_website" class="text-blue-500" target="_blank">{{ partner.prt_website }}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <br>
+</section>
